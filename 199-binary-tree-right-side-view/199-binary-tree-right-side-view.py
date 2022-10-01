@@ -10,7 +10,7 @@ class Solution:
         stack=[]
         while q:
             for i in range(len(q)):
-                Node=q.popleft()
+                Node=q.popleft()            
                 if Node and Node.left:
                     q.append(Node.left)
                 if Node and Node.right:
