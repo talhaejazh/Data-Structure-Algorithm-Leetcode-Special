@@ -16,3 +16,6 @@ class Solution:
                 heapq.heappushpop(ans,[value,key])
         print(ans)
         return [key for value,key in ans]
+    
+    #time nlogk
+    #space On
