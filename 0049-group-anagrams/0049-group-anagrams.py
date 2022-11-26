@@ -13,22 +13,6 @@ class Solution:
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-#         letters_to_words = defaultdict(list)
-#         for word in strs:
-#             print(word)
-#             letters_to_words[tuple(sorted(word))].append(word)
-#             print(letters_to_words.values())
-#         return list(letters_to_words.values())
     
     
     
