@@ -5,7 +5,7 @@ class Solution:
         numset=set() #change into set to get unique number only
         for num in nums:
             numset.add(num)
-        print(numset)
+        # print(numset)
         result=1
         for num in numset:
             count=1  
