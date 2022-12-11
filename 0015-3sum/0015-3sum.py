@@ -2,7 +2,7 @@ class Solution(object):
     def threeSum(self, nums):
         triplets = []
         nums.sort()
-        for i in range(len(nums)-2):
+        for i in range(len(nums)):
             if i>0 and nums[i]==nums[i-1]:
                 continue
             l=i+1
@@ -24,7 +24,8 @@ class Solution(object):
         return triplets
          
         
-        
+   # O(n^2)time
+#O(n) space
         
         
         
