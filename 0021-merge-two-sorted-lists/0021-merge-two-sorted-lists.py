@@ -10,7 +10,7 @@ class Solution:
             return l1
         
         while l1 and l2:
-            if l1.val<l2.val:
+            if l1.val < l2.val:
                 current.next=l1
                 l1=l1.next
             else:
@@ -22,6 +22,23 @@ class Solution:
         if l2:
             current.next=l2
         return dummy.next
+        
+        
+        
+        
+        
+        #     if l1.val<l2.val:
+        #         current.next=l1
+        #         l1=l1.next
+        #     else:
+        #         current.next=l2
+        #         l2=l2.next
+        #     current=current.next
+        # if l1:
+        #     current.next=l1
+        # if l2:
+        #     current.next=l2
+        # return dummy.next
         
         
         
