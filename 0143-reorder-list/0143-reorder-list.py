@@ -7,17 +7,21 @@ class Solution(object):
     def reorderList(self, head):
         #find middle node
         #set slow and fast pointer
-        slow,fast=head,head.next
+        slow,fast=head,head.next     
         while fast and fast.next:
             slow=slow.next
             fast=fast.next.next
-        cur,prev=slow.next,None
+        
+        #reverse the second half
+        #to reverse we need three things
+        prev,cur=None,slow.next #second half 
         while cur:
             temp=cur.next
             cur.next=prev
             prev=cur
             cur=temp
         slow.next=None
+        #now mix 1st half with second half(reverse)
         head1,head2=head,prev
         while head2:
             temp=head1.next
@@ -25,40 +29,6 @@ class Solution(object):
             head1=head2
             head2=temp
         return head
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-#         while fast and fast.next:
-#             slow=slow.next
-#             fast=fast.next.next
-        
-#         #reverse the second half
-#         #to reverse we need three things
-#         prev,cur=None,slow.next #second half 
-#         while cur:
-#             temp=cur.next
-#             cur.next=prev
-#             prev=cur
-#             cur=temp
-#         slow.next=None
-#         #now mix 1st half with second half(reverse)
-#         head1,head2=head,prev
-#         while head2:
-#             temp=head1.next
-#             head1.next=head2
-#             head1=head2
-#             head2=temp
-#         return head
             
         
         
