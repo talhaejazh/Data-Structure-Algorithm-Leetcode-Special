@@ -6,10 +6,9 @@
 #         self.right = right
 class Solution:
     def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
-        if not subRoot:
-            return True
-        if not root:
-            return False
+        if not subRoot:return True            
+        if not root:return False
+            
         
         
         def dfs(root, subRoot):
