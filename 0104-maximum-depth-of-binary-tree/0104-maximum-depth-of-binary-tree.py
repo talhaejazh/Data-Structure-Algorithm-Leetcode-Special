@@ -12,11 +12,10 @@ class Solution:
                     return 0
                 lh=dfs(root.left)
                 rh=dfs(root.right)
-                height[0]=1 + max(rh,lh)
+                height[0]= 1 + max(lh,rh)
                 return height[0]
-            
             return dfs(root)
-
+     
 
 
             
