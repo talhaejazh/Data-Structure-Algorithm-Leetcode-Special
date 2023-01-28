@@ -13,8 +13,8 @@ class Solution:
                 return False
             if s.val != t.val:
                 return False
-            return (Same(s.left,t.left) and Same(s.right,t.right))
-        return (Same(p,q))
+            return(Same(s.left,t.left) and (Same(s.right,t.right)))
+        return Same(p,q)
         
         
         
