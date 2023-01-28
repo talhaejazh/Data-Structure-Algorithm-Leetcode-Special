@@ -9,13 +9,27 @@ class Solution:
             height=[0]
             def dfs(root):
                 if not root:
-                        return 0
+                    return 0
                 lh=dfs(root.left)
                 rh=dfs(root.right)
-                height[0]=(1+max(lh,rh))
+                height[0]=1 + max(rh,lh)
                 return height[0]
-            dfs(root)
-            return height[0]
+            
+            return dfs(root)
+
+
+
+            
+#             height=[0]
+#             def dfs(root):
+#                 if not root:
+#                         return 0
+#                 lh=dfs(root.left)
+#                 rh=dfs(root.right)
+#                 height[0]=(1+max(lh,rh))
+#                 return height[0]
+#             dfs(root)
+#             return height[0]
         
             
 #             return dfs(root)
