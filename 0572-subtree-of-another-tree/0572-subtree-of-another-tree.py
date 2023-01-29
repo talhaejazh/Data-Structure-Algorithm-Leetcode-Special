@@ -8,29 +8,29 @@ class Solution:
     def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
         if not subRoot:return True            
         if not root:return False  
-#         def dfs(root,subRoot):
-#             if not root and not subRoot:
-#                 return True
-#             if root and subRoot and root.val==subRoot:
-#                 return (dfs(root.left,subRoot.left) and (dfs(root.right,subRoot.right)))
-#             return False
-#         if dfs(root,subRoot):
-#             return True
-#         return (self.isSubtree(root.left,subRoot) or self.isSubtree(root.right,subRoot))
-        
-        
-        
-        
-        
-        def dfs(root, subRoot):
+        def dfs(root,subRoot):
             if not root and not subRoot:
                 return True
-            if root and subRoot and root.val ==subRoot.val:
-                return (dfs(root.left, subRoot.left) and dfs(root.right, subRoot.right))
+            if root and subRoot and root.val==subRoot.val:
+                return (dfs(root.left,subRoot.left) and (dfs(root.right,subRoot.right)))
             return False
-        if dfs(root, subRoot):
+        if dfs(root,subRoot):
             return True
-        return (self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot))        
+        return (self.isSubtree(root.left,subRoot) or self.isSubtree(root.right,subRoot))
+        
+        
+        
+        
+        
+        # def dfs(root, subRoot):
+        #     if not root and not subRoot:
+        #         return True
+        #     if root and subRoot and root.val == subRoot.val:
+        #         return (dfs(root.left, subRoot.left) and dfs(root.right, subRoot.right))
+        #     return False
+        # if dfs(root, subRoot):
+        #     return True
+        # return (self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot))        
 
 
         
