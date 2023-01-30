@@ -13,7 +13,6 @@ class Solution:
             d[level].append(node.val)
             dfs(node.left,level+1)
             dfs(node.right,level+1)
-            
         dfs(root,0)
         return d.values()
 
@@ -21,6 +20,40 @@ class Solution:
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        # d=defaultdict(list)
+        # def dfs(node,level):
+        #     if not node:
+        #         return
+        #     d[level].append(node.val)
+        #     dfs(node.left,level+1)
+        #     dfs(node.right,level+1)
+        # dfs(root,0)
+        # return d.values()
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
         
         
         
