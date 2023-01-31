@@ -5,7 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+    def isValidBST(self, root: Optional[TreeNode]) -> bool: #TC O(N) SC O(1)
         minVal=float('-inf')
         maxVal=float('inf')
         def dfs(root,minVal,maxVal):
@@ -15,67 +15,5 @@ class Solution:
                 return False
             return dfs(root.left,minVal,root.val) and dfs(root.right,root.val,maxVal)
         return dfs(root,minVal,maxVal)
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        # minVal=float('-inf')
-        # maxVal=float('inf')
-        # def dfs(root,minVal,maxVal):
-        #     if not root:
-        #         return True
-        #     if not(root.val<maxVal and root.val>minVal):
-        #         return False
-        #     return dfs(root.left,minVal,root.val) and dfs(root.right,root.val,maxVal)
-        # return dfs(root,minVal,maxVal)
-        
-        
-        
-        
-        
-        
-        
-        
-#         minVal=float('-inf')
-#         maxVal=float('inf')
-#         def dfs(root, minVal,maxVal):
-#             if not root:
-#                 return True
-#             if not(root.val< maxVal  and root.val>minVal):
-#                 return False
-#             return (dfs(root.left, minVal, root.val) and dfs(root.right, root.val, maxVal))
-#         return dfs(root, minVal, maxVal)
 
         
