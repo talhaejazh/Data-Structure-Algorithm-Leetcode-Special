@@ -38,5 +38,6 @@ class Solution:
         while end < n:
             step += 1
             start, end = end, max(max_range[i] for i in range(start, end + 1))
+            print(end)
             if start == end: return -1
         return step
