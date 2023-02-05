@@ -4,8 +4,8 @@ class Solution:
         N=len(nums)
         lastPos=0
         l=r=0
-        while r<N-1:
-            for i in range(l,r+1):
+        while r<N-1:           #2 pointer solution start from same location.
+            for i in range(l,r+1):  #passing block and run racae same pehnomenon
                 lastPos=max(lastPos,i+nums[i])
             l=r+1
             r=lastPos
