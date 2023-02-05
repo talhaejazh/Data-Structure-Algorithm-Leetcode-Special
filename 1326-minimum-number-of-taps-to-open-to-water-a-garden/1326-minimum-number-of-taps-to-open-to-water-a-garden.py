@@ -31,7 +31,8 @@ class Solution:
     
         max_range = [0] * (n + 1)
         for i, r in enumerate(ranges):
-            left, right = max(0, i - r), min(n, i + r)
+            left =max(0, i - r)
+            right = min(n, i + r)
             max_range[left] = max(max_range[left], right)
         start = end = step = 0
         while end < n:
