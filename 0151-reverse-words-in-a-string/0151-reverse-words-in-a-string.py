@@ -1,6 +1,6 @@
 class Solution:
     def reverseWords(self, s: str) -> str:
-        return " ".join(reversed(s.split()))
+       
 #         result=''
 #         i,n=0,len(s)
 #         while i<n:
@@ -19,5 +19,5 @@ class Solution:
 #             i=j+1
 #         return result
                 
-                
+        return " ".join(reversed(s.split())) #method 2 using fucntion only              
             
