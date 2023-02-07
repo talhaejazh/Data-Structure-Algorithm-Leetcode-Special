@@ -1,24 +1,32 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
 
-        hashMap=defaultdict(list)
-        for cur in strs:
-            key=''.join(sorted(cur))
-            if key in hashMap:
-                hashMap[key].append(cur)
+#         hashMap=defaultdict(list)
+#         for cur in strs:
+#             key=''.join(sorted(cur))
+#             if key in hashMap:
+#                 hashMap[key].append(cur)
+#             else:
+#                 hashMap[key]=[cur]
+#         res=[]
+#         for key in hashMap:
+#             res.append(hashMap[key])
+#         return res        
+        
+        
+        lookup=defaultdict(list)
+        for s in strs:
+            key="".join(sorted(list(s)))
+            if key in lookup:
+                lookup[key].append(s)
             else:
-                hashMap[key]=[cur]
-        res=[]
-        for key in hashMap:
-            res.append(hashMap[key])
-        return res        
+                lookup[key]=[s]
+        output=[] #to create a list intialize empty list
+        for key in lookup:
+            output.append(lookup[key])
+        return output
         
         
-        # lookup=defaultdict(list)
-        # for s in strs:
-        #     key="".join(sorted(list(s)))
-        #     lookup[key].append(s)
-        # output=[] #to create a list intialize empty list
         # return [l for l in lookup.values()]:
         # for l in lookup.values():
         #     output.append(l):
