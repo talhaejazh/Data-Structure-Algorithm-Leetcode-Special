@@ -10,6 +10,7 @@ class Solution:
                 maxLen=max(maxLen,i-start+1)
             hashmap[c]=i
         return maxLen
+
         
         
         
