@@ -12,7 +12,7 @@ class Solution:
             while j<n and s[j]!=' ':
                 j+=1
             sub=s[i:j]
-            if len(result) == 0:
+            if len(result)==0:
                 result=sub
             else:
                 result=sub+" "+result
