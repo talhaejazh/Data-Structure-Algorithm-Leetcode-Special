@@ -1,6 +1,6 @@
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        l,r = [1]*len(nums),[1]*len(nums)
+        l,r = [1]*len(nums),[1]*len(nums)  #[1,1,1,1]
         #for right array
         revert=nums[::-1]  #[4,3,2,1]
         # print(l,r,revert)
