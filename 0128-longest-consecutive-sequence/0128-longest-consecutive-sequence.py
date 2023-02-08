@@ -3,10 +3,10 @@ class Solution:
 
         if not nums:
             return 0
-        numset=set() #change into set to get unique number only
-        for num in nums:
-            numset.add(num)
-        print(numset)
+        numset=set(nums) #change into set to get unique number only
+        # for num in nums:
+        #     numset.add(num)
+        # print(numset)
         result=1
         for num in numset:
             count=1  
@@ -15,7 +15,8 @@ class Solution:
                     count+=1       #if yes then count until
                     num+=1
                     result=max(result,count)
-        return result
+        return result 
                 
-
+# Time O(n)
+# Space O(n)
         
