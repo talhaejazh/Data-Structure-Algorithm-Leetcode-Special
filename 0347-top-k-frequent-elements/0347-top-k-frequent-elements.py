@@ -1,7 +1,7 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         ans=[]
-        freq=dict()
+        freq=defaultdict()
         for num in nums:
             if num not in freq:
                 freq[num]=1
