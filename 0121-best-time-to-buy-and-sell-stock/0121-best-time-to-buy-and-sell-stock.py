@@ -3,29 +3,16 @@ class Solution:
         ##2 pointer solutionnstart from one sode
         l=0
         r=1
-        maxprof=0
+        # print(prices[1])
+        maxprofit=0
         while r<len(prices):
-            curpric=prices[r]-prices[l]
+            curpro=prices[r]-prices[l]
             if prices[l]<prices[r]:
-                maxprof=max(curpric,maxprof)
+                maxprofit=max(maxprofit,curpro)
             else:
                 l=r
             r+=1
-        return maxprof
-        
-        
-#         l=0
-#         r=1
-#         # print(prices[1])
-#         maxprofit=0
-#         while r<len(prices):
-#             curpro=prices[r]-prices[l]
-#             if prices[l]<prices[r]:
-#                 maxprofit=max(maxprofit,curpro)
-#             else:
-#                 l=r
-#             r+=1
-#         return maxprofit
+        return maxprofit
         
         
 #         left = 0 #Buy
