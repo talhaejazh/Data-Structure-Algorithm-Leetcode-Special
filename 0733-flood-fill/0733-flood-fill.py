@@ -7,13 +7,30 @@ class Solution:
         def dfs(r,c):
             if image[r][c]==newcolor:
                 image[r][c]=color
-                if r>=1: dfs(r-1,c)
+                if r>=1:dfs(r-1,c)
                 if r+1<R:dfs(r+1,c)
-                if c>=1: dfs(r,c-1)
+                if c>=1:dfs(r,c-1)
                 if c+1<C:dfs(r,c+1)
-        
         dfs(sr,sc)
         return image
+
+        
+        
+        
+        
+#         newcolor=image[sr][sc]
+#         if newcolor==color:
+#             return image
+#         def dfs(r,c):
+#             if image[r][c]==newcolor:
+#                 image[r][c]=color
+#                 if r>=1: dfs(r-1,c)
+#                 if r+1<R:dfs(r+1,c)
+#                 if c>=1: dfs(r,c-1)
+#                 if c+1<C:dfs(r,c+1)
+        
+#         dfs(sr,sc)
+#         return image
                     
         
         
