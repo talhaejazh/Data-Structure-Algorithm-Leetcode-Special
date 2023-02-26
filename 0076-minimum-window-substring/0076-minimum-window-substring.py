@@ -1,14 +1,45 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
+#         lookup=Counter(t)
+#         S=len(s)
+#         mx=float('inf')
+#         start,end=0,0
+#         output=""
+#         count=len(lookup)
+#         print(count)
+#         while end<S:
+#             while end<S and S!=0:
+#                 if s[end] in lookup:
+#                     lookup[s[end]]=-1
+#                     if lookup[s[end]]==0:
+#                         count-=1
+#                 end+=1
+#             while start<end and count==0:
+#                 if end-start<mx:
+#                     mx=end-start
+#                     output=s[start:end]
+#                 if s[start] in lookup:
+#                     lookup[s[start]]+=1
+#                     if lookup[s[start]] >0:
+#                         count+=1
+#                 start+=1
+#         return output                
+            
+        
+        
+        
+        
+        
+        
         lookup=Counter(t)
-        mx=float("inf")
+        mx=float("inf")  #to find lower value we use this 
         S=len(s)
         start,end=0,0
-        output=""
+        output=""          #answer in string
         count=len(lookup)                       #"ADOBECODEBANC
-        while end<S:
+        while end<S: 
             #for end pointer
-            while end<S and count!=0:
+            while end<S and count!=0:    #check last point which have all the value CODEBANC
                 if s[end] in lookup:
                     lookup[s[end]]-=1
                     if lookup[s[end]]==0:
