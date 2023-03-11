@@ -8,5 +8,5 @@ class Solution:
             arrival_time=(target-p)/s #calculate time
             if not ans or arrival_time>ans[-1]: #check if they are on same fleet 
                 ans.append(arrival_time)
-        return len(ans)
+        return len(ans) #return number of fleet
         
