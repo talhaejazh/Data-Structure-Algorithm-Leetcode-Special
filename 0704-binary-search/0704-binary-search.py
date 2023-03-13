@@ -1,6 +1,6 @@
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        N=len(nums)
+        N=len(nums)          #     time Olog(n)
         l,r=0,N-1
         while l<=r:
             mid=(l+r)//2
