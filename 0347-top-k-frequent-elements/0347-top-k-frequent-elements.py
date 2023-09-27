@@ -13,4 +13,4 @@ class Solution:
             else:
                 heapq.heappushpop(ans,[value,key]) #value mean number of frequecy appear
         print(ans)
-        return (key for value,key in ans)       #return value which repeat
+        return (key for value,key in ans)       #return key(what number) which repeat
