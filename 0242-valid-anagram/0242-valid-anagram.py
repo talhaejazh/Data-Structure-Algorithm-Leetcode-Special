@@ -17,18 +17,18 @@ class Solution:
         #         return False
         # return True
       
-        dict_value = {}        
-        for letter in s:
-            if letter not in dict_value:
-                dict_value[letter] = 1                
+        mydict = {}        
+        for l in s:
+            if l not in mydict:
+                mydict[l] = 1                
             else:
-                dict_value[letter] += 1                
-        for letter in t:
-            if letter not in dict_value:
+                mydict[l] += 1                
+        for l in t:
+            if l not in mydict:
                 return False            
             else:
-                dict_value[letter] -= 1
-        for value in dict_value.values():
+                mydict[l] -= 1
+        for value in mydict.values():
             if value != 0:
                 return False
         return True
