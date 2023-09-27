@@ -11,7 +11,7 @@ class Solution:
             if l not in mydict:    
                 return False            
             else:
-                mydict[l] -= 1
+                mydict[l] -= 1                #after comparision
         for value in mydict.values():    #mydict{a:0,b:0,c:0}
             if value != 0:
                 return False
