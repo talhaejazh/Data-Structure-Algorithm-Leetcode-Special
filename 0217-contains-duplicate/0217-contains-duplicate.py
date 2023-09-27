@@ -1,70 +1,10 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        hashMap={}
+        hashmap={}
         for i in nums:
-            if i not in hashMap:
-                hashMap[i]=1
-
+            if i not in hashmap:
+                hashmap[i]=1
             else:
                 return True
         return False
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-#         hashMap={}
-#         for i in nums:
-#             if i not in hashMap:
-#                 hashMap[i]=1
-#             else:
-#                 return True
-#         return False
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-    
-        
         
