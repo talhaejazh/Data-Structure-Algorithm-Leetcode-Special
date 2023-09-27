@@ -1,6 +1,6 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        if len (s) != len (t):
+        if len(t)!=len(s):
             return False
         hashMapS={}
         hashMapT={}
@@ -14,4 +14,3 @@ class Solution:
                 return False
         else:
             return True
-        
