@@ -6,13 +6,13 @@ class Solution:
             if l not in mydict:
                 mydict[l] = 1                
             else:
-                mydict[l] += 1                
+                mydict[l] += 1      #mydict{a:1,b:1,c:1}              
         for l in t:
-            if l not in mydict:
+            if l not in mydict:    
                 return False            
             else:
                 mydict[l] -= 1
-        for value in mydict.values():
+        for value in mydict.values():    #mydict{a:0,b:0,c:0}
             if value != 0:
                 return False
         return True
