@@ -4,6 +4,7 @@ class Solution:
         if not nums:
             return 0
         numset=set(nums)
+        print(numset)
         for n in numset:
             if n-1 not in numset:
                 start=n
