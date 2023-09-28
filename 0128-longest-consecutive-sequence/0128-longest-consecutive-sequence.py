@@ -7,11 +7,12 @@ class Solution:
         for n in numset:
             if n-1 not in numset:
                 start=n
-                while start in numset: #add+1 right value and check in set
+                while start in numset:
                     start+=1
                 output=max(output,start-n)
         return output
-
+        
+        
 #         if not nums:
 #             return 0
 #         numset=set(nums) #change into set to get unique number only
@@ -29,4 +30,3 @@ class Solution:
                 
 # Time O(n)
 # Space O(n)
-        
