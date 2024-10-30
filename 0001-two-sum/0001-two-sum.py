@@ -1,12 +1,12 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        numMap = {}
-        n = len(nums)
-
+        n=len(nums)
+        lookup={}
         for i in range(n):
-            complement = target - nums[i]
-            if complement in numMap:
-                return [numMap[complement], i]
-            numMap[nums[i]] = i
-
-        return []  # No solution found
+            if nums[i] in lookup:
+                return [lookup[nums[i]],i]
+            else:
+                lookup[target-nums[i]]=i
+        return None
+        
+        
