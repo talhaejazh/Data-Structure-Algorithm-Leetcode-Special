@@ -1,27 +1,17 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-#         n=len(nums)
-#         numMap={}
-#         for i in range(n):
-#             complement=target-nums[i]
-#             if complement in numMap:
-#                 reutrn [numMap[complement[i]],i]
-#             # numMap[nums[i]=i]
-#             numMap[nums[i]] = i
-
-            
-#         return None
-                
-        numMap = {}
-        n = len(nums)
-
+        n=len(nums)
+        numMap={}
         for i in range(n):
-            complement = target - nums[i]
+            complement=target-nums[i]
             if complement in numMap:
-                return [numMap[complement], i]
+                return [numMap[complement],i]
+            # numMap[nums[i]=i]
             numMap[nums[i]] = i
 
-        return []  # No solution found 
+        return []
+
+        
         
         
         
