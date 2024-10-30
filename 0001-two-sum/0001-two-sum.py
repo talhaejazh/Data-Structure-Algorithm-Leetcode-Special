@@ -6,10 +6,21 @@ class Solution:
             complement=target-nums[i]
             if complement in numMap:
                 return [numMap[complement],i]
-            # numMap[nums[i]=i]
-            numMap[nums[i]] = i
-
+            numMap[nums[i]]=i
         return []
+        
+        
+        
+        
+        
+#         for i in range(n):
+#             complement=target-nums[i]
+#             if complement in numMap:
+#                 return [numMap[complement],i]
+#             # numMap[nums[i]=i]
+#             numMap[nums[i]] = i
+
+#         return []
 
         
         
