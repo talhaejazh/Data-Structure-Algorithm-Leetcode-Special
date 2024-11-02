@@ -18,12 +18,12 @@ class Solution:
                 return root
         return dfs(root)
 
-        def dfs(root):
-            if (p.val<root.val and q.val<root.val): # if root value is greater than both it will the value to left side
-                return(dfs(root.left)) #because the left side has small values
-            if (p.val>root.val and q.val>root.val):
-                return(dfs(root.right))
-            else:
-                return root
-        return dfs(root)
+        # def dfs(root):
+        #     if (p.val<root.val and q.val<root.val): # if root value is greater than both it will the value to left side
+        #         return(dfs(root.left)) #because the left side has small values
+        #     if (p.val>root.val and q.val>root.val):
+        #         return(dfs(root.right))
+        #     else:
+        #         return root
+        # return dfs(root)
         
