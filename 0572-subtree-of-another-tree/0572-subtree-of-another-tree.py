@@ -21,16 +21,32 @@ class Solution:
         
         
         
+#         if not subRoot: return True
+#         if  not root: return False
         
-        # def dfs(root, subRoot):
-        #     if not root and not subRoot:
-        #         return True
-        #     if root and subRoot and root.val == subRoot.val:
-        #         return (dfs(root.left, subRoot.left) and dfs(root.right, subRoot.right))
-        #     return False
-        # if dfs(root, subRoot):
-        #     return True
-        # return (self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot))        
+#         def dfs(root,subRoot):
+#             if not root and not subRoot: return True
+#             if root and subRoot and root.val==subRoot.val:
+#                 return (dfs(root.left,subRoot.left) and (dfs(root.right,subRoot.right)))
+#             return False
+#         if dfs(root,subRoot):
+#             return True
+#         return (self.isSubtree(root.left,subRoot.left) and self.isSubtree(root.right,subRoot.right))
+        
 
-
+        
+        
+        
+        
+        if not subRoot: return True
+        if not root and not subRoot: return True
+        if not root: return False
+        
+        def dfs(root,subRoot):
+            if root and subRoot and root.val==subRoot.val:
+                return (dfs(root.left,subRoot.left) and (dfs(root.right,subRoot.right)))
+            return False
+        if dfs(root,subRoot):
+            return True
+        return (self.isSubtree(root.left,subRoot.left) and self.isSubtree(root.right,subRoot.right))
         
