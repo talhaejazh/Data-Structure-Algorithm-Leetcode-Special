@@ -11,20 +11,10 @@ class Solution:
                 return True
             if not s or not t:
                 return False
-            if s.val != t.val:
+            if s.val!=t.val:
                 return False
-            return(Same(s.left,t.left) and (Same(s.right,t.right)))
+            return(Same(s.left,t.left) and Same(s.right,t.right))
         return Same(p,q)
+      
         
         
-        
-        
-        # def isSame(s,t):
-        #     if not s and not t:
-        #         return True
-        #     if not s or not t:
-        #         return False
-        #     if s.val != t.val:
-        #         return False
-        #     return (isSame(s.left,t.left) and isSame(s.right,t.right))
-        # return isSame(p,q)
