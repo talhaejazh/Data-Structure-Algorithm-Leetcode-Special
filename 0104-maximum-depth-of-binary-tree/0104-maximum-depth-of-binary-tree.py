@@ -6,7 +6,8 @@
 #         self.right = right
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        d=defaultdict(list)
+        d=defaultdict(list)   #solve same as problem 102. Binary Tree Level Order Traversal
+
         def dfs(node,level):
             if not node:
                 return
@@ -15,24 +16,9 @@ class Solution:
             dfs(node.right,level+1)
         dfs(root,0)
         return len(d)
+             
         
-        
-        
-        
-        
-        
-        
-#         d = defaultdict(list)
 
-#         def dfs(node, level):
-#             if not node:
-#                 return
-#             d[level].append(node.val)  # Store node values by level
-#             dfs(node.left, level + 1)
-#             dfs(node.right, level + 1)
-
-#         dfs(root, 0)
-#         return len(d)
 
 #         height=[0]
 #         def dfs(root):
