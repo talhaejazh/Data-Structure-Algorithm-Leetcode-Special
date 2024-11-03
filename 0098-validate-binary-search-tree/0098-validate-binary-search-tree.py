@@ -5,15 +5,27 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def isValidBST(self, root: Optional[TreeNode]) -> bool: #TC O(N) SC O(1)
-        minVal=float('-inf')
-        maxVal=float('inf')
-        def dfs(root,minVal,maxVal):
-            if not root:
-                return True
-            if not(root.val<maxVal and root.val>minVal):
-                return False
-            return dfs(root.left,minVal,root.val) and dfs(root.right,root.val,maxVal)
-        return dfs(root,minVal,maxVal)
-
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:\
+        # minVal = float('-inf')
+        # maxVal = float('inf')
+        # def dfs(node,minVal,maxVal):
+        #     if not node:
+        #         return 
+        #     if minVal<node.val<maxVal:
+        #         return False
+        #     return dfs(node.left,minVal,node.val) and dfs(node.right,node.val,maxVal)
+        # dfs(root)
         
+        minVal = float('-inf')
+        maxVal = float('inf')
+        
+        def dfs(node, minVal, maxVal):
+            if not node:
+                return True  # An empty tree is a valid BST
+            # Check if the current node's value is within the valid range
+            if not (minVal < node.val < maxVal):
+                return False
+            # Recursively check the left and right subtrees
+            return dfs(node.left, minVal, node.val) and dfs(node.right, node.val, maxVal)
+        
+        return dfs(root, minVal, maxVal)  # Start the DFS from the roo
