@@ -6,19 +6,19 @@
 #         self.right = right
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:\
-        # minVal = float('-inf')
-        # maxVal = float('inf')
-        # def dfs(node,minVal,maxVal):
-        #     if not node:
-        #         return 
-        #     if minVal<node.val<maxVal:
-        #         return False
-        #     return dfs(node.left,minVal,node.val) and dfs(node.right,node.val,maxVal)
-        # dfs(root)
         
         minVal = float('-inf')
         maxVal = float('inf')
         
+        # def dfs(node,minVal,maxVal):
+        #     if not node:
+        #         return True
+        #     if minVal<node.val<maxVal:
+        #         return False
+        #     return dfs(node.left,minVal,node.val) and dfs(node.right,node.val,maxVal)
+        # dfs(root,minVal, maxVal)
+
+
         def dfs(node, minVal, maxVal):
             if not node:
                 return True  # An empty tree is a valid BST
@@ -28,4 +28,4 @@ class Solution:
             # Recursively check the left and right subtrees
             return dfs(node.left, minVal, node.val) and dfs(node.right, node.val, maxVal)
         
-        return dfs(root, minVal, maxVal)  # Start the DFS from the roo
+        return dfs(root, minVal, maxVal)
