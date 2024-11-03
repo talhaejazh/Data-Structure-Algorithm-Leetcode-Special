@@ -14,21 +14,7 @@ class Solution:
             dfs(node.left,level+1)
             dfs(node.right,level+1)
         dfs(root,0)
-        return d.values()
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        return list(d.values())
         
         # d=defaultdict(list)
         # def dfs(node,level):
@@ -41,37 +27,3 @@ class Solution:
         # return d.values()
 
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-        # if not root:
-        #     return
-        # res=[]
-        # q=deque([root])
-        # while q:
-        #     stack=[]
-        #     for i in range(len(q)):
-        #         node=q.popleft()
-        #         stack.append(node.val)
-        #         if node.left:
-        #             q.append(node.left)
-        #         if node.right:
-        #             q.append(node.right)
-        #     res.append(stack)
-        # return res
