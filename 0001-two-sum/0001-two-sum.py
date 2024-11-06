@@ -9,10 +9,17 @@ class Solution:
         #     numMap[nums[i]]=i
         # return []
         
-        
-        num_map = {}  # Dictionary to store number and its index
+        numMap={}
         for i, num in enumerate(nums):
-            complement = target - num
-            if complement in num_map:
-                return [num_map[complement], i]
-            num_map[num] = i
+            complement=target - num
+            if complement in numMap:
+                return [numMap[complement],i]
+            numMap[num]=i
+        
+        
+#         num_map = {}  # Dictionary to store number and its index
+#         for i, num in enumerate(nums):
+#             complement = target - num
+#             if complement in num_map:
+#                 return [num_map[complement], i]
+#             num_map[num] = i
