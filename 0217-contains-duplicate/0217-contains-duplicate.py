@@ -7,6 +7,15 @@ class Solution:
             else:
                 return True
         return False
+        
+        
+        # hashmap={}
+        # for i in nums:
+        #     if i not in hashmap:
+        #         hashmap[i]=1
+        #     else:
+        #         return True
+        # return False
             
         
         
