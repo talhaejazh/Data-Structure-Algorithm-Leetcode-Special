@@ -1,5 +1,13 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+
+        numMap={}
+        for i, num in enumerate(nums):
+            complement=target - num
+            if complement in numMap:  #check if the remaining number in the list then we got it
+                return [numMap[complement],i]
+            numMap[num]=i
+
         # n=len(nums)
         # numMap={}
         # for i in range(n):
@@ -9,17 +17,3 @@ class Solution:
         #     numMap[nums[i]]=i
         # return []
         
-        numMap={}
-        for i, num in enumerate(nums):
-            complement=target - num
-            if complement in numMap:
-                return [numMap[complement],i]
-            numMap[num]=i
-        
-        
-#         num_map = {}  # Dictionary to store number and its index
-#         for i, num in enumerate(nums):
-#             complement = target - num
-#             if complement in num_map:
-#                 return [num_map[complement], i]
-#             num_map[num] = i
